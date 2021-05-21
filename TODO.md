@@ -42,8 +42,8 @@
         - [ ] Append the object in an unordered list to the DOM to keep track of previous problems
 
 - [ ] Server Side
-    - [ ] Will need to initiate node and bring in express
-        - [ ] Bring in node_modules 
+    - [ x ] Will need to initiate node and bring in express
+        - [ x ] Bring in node_modules 
         - [ ] Create statements that import express and setup a port
         - [ ] Initiate and create the background info to run a server off of
     - [ ] Create a POST function that stores user input in an array (maybe object?)
