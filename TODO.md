@@ -1,11 +1,11 @@
-- [ ] SERVER SETUP FILE STRUCTURE
+- [ x ] SERVER SETUP FILE STRUCTURE
     - [ x ] Make .gitignore file in root folder
     - [ x ] Make readme.md file in root folder (optional, but recommended)
         - [ x ] Make server folder in root folder
             - [ x ] Make server.js file in server folder
-            - [ ] Make modules folder
+            - [ x ] Make modules folder
             - [ x ] Make public folder
-                - [ ] Add favicon.ico file in public folder
+                - [ x ] Add favicon.ico file in public folder
                 - [ x ] Make index.html in public folder
                     - [ x ] Link "./styles/style.css"
                     - [ x ] Source in "./vendors/jquery-3.6.0.js" above
@@ -20,16 +20,16 @@
                     - [ x ] Add jQuery.js file here
 
 - [ ] HTML
-    - [ ] Add an input that takes in a number
-        - [ ] Give this input an id 
-    - [ ] Add 4 buttons (addition, subtraction, multiplication, division)
-        - [ ] Give these buttons ids
-    - [ ] Add another input that takes in a second number
-        - [ ] Give this input an id
-    - [ ] Add another button that calculates the two inputs and operator (= button)
-        - [ ] Give this button an id
-    - [ ] Create a clear button that clears the inputs
-        - [ ] Give this button an id
+    - [ x ] Add an input that takes in a number
+        - [ x ] Give this input an id 
+    - [ x ] Add 4 buttons (addition, subtraction, multiplication, division)
+        - [ x ] Give these buttons ids
+    - [ x ] Add another input that takes in a second number
+        - [ x ] Give this input an id
+    - [ x ] Add another button that calculates the two inputs and operator (= button)
+        - [ x ] Give this button an id
+    - [ x ] Create a clear button that clears the inputs
+        - [ x ] Give this button an id
     - [ ] Under these inputs and buttons, add a div that calculates the total output of the   inputs
     - [ ] Create an unordered list that keeps track of previous math equations
 
@@ -44,8 +44,8 @@
 - [ ] Server Side
     - [ x ] Will need to initiate node and bring in express
         - [ x ] Bring in node_modules 
-        - [ ] Create statements that import express and setup a port
-        - [ ] Initiate and create the background info to run a server off of
+        - [ x ] Create statements that import express and setup a port
+        - [ x ] Initiate and create the background info to run a server off of
     - [ ] Create a POST function that stores user input in an array (maybe object?)
     - [ ] Will need to create a function that calculates the user input 
     - [ ] Create a GET function that pulls the stored info and calculations in the array and sends it to the client
