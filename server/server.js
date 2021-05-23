@@ -13,6 +13,61 @@ app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 
+//create an empty array to hold the input values
+let inputValues = [];
+
+console.log(inputValues);
+
+//need to create a POST rounte to recieve object from client side
+app.post('/input-values', (req, res) => {
+    console.log(req.body);
+    //push the req body into an empty array
+    inputValues.push(req.body);
+
+//send a status stating the message has been recieved 
+    res.sendStatus(201);
+});
+
+function calculateUserInput () {
+    for (equation of inputValues) {
+        if (equation.operator = '+') {
+            equation.solution = equation.inputOne + equation.inputTwo;
+            inputValues.push(equation.solution);
+        }
+        if (equation.operator = '-') {
+            equation.solution = equation.inputOne - equation.inputTwo;
+            inputValues.push(equation.solution);
+        }
+        if (equation.operator = '*') {
+            equation.solution = equation.inputOne * equation.inputTwo;
+            inputValues.push(equation.solution);
+        }
+        if (equation.operator = '/') {
+            equation.solution = equation.inputOne / equation.inputTwo;
+            inputValues.push(equation.solution)
+        }
+    }
+}
+
+console.log(calculateUserInput());
+
+app.get('/input-values', (req, res) => {
+
+console.log(inputValues);
+
+calculateUserInput();
+
+res.send(inputValues);
+
+
+})
+
+
+
+
+
+
+
 
 
 

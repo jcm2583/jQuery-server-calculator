@@ -34,9 +34,9 @@
     - [ ] Create an unordered list that keeps track of previous math equations
 
 - [ ] Client.js
-    - [ ] Create click listeners for each button that carry out that specific task (ex: add,   subract, etc)
-    - [ ] Capture the user input and create an object
-        - [ ] POST or send this object to the server to be stored
+    - [ x ] Create click listeners for each button that carry out that specific task (ex: add,   subract, etc)
+    - [ x ] Capture the user input and create an object
+        - [ x ] POST or send this object to the server to be stored
     - [ ] Will need to GET past calculations to post to DOM
         - [ ] Append the total arimethic calculation to the DOM
         - [ ] Append the object in an unordered list to the DOM to keep track of previous problems
