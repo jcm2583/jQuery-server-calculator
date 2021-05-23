@@ -71,6 +71,7 @@ function clearInput() {
 //clear the input boxes when the user clicks on the clear button
     $('#inputOne').val('');
     $('#inputTwo').val('');
+    $('#total').empty();
 }
 
 function appendCalculations () {
