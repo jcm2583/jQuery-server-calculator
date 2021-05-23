@@ -40,6 +40,7 @@ function addCalculation () {
     }).then(response => {
         console.log(response);
     })
+    appendCalculations();
 }
 
 function additionCapture () {

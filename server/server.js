@@ -22,7 +22,12 @@ console.log(inputValues);
 app.post('/input-values', (req, res) => {
     console.log(req.body);
     //push the req body into an empty array
+
     inputValues.push(req.body);
+    
+    calculateUserInput();
+
+    console.log(inputValues);
 
 //send a status stating the message has been recieved 
     res.sendStatus(201);
@@ -30,32 +35,25 @@ app.post('/input-values', (req, res) => {
 
 function calculateUserInput () {
     for (equation of inputValues) {
-        if (equation.operator = '+') {
+        if (equation.operator == '+') {
             equation.solution = equation.inputOne + equation.inputTwo;
-            inputValues.push(equation.solution);
         }
-        if (equation.operator = '-') {
+        if (equation.operator == '-') {
             equation.solution = equation.inputOne - equation.inputTwo;
-            inputValues.push(equation.solution);
         }
-        if (equation.operator = '*') {
+        if (equation.operator == '*') {
             equation.solution = equation.inputOne * equation.inputTwo;
-            inputValues.push(equation.solution);
         }
-        if (equation.operator = '/') {
+        if (equation.operator == '/') {
             equation.solution = equation.inputOne / equation.inputTwo;
-            inputValues.push(equation.solution)
         }
     }
 }
-
-console.log(calculateUserInput());
 
 app.get('/input-values', (req, res) => {
 
 console.log(inputValues);
 
-calculateUserInput();
 
 res.send(inputValues);
 
