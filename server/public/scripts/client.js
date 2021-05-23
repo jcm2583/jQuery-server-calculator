@@ -7,18 +7,20 @@ function readyNow () {
 
 
     // Click Listeners
-    $('#equalsButton').on('click', addCalculation)
+    $('#equalsButton').on('click', addCalculation);
 
     // //addition click listern
-    $('#additionButton').on('click', additionCapture)
+    $('#additionButton').on('click', additionCapture);
 
-    $('#subtractionButton').on('click', subtractionCapture)
+    $('#subtractionButton').on('click', subtractionCapture);
 
-    $('#multiplicationButton').on('click', multiplicationCapture)
+    $('#multiplicationButton').on('click', multiplicationCapture);
 
-    $('#divisionButton').on('click', divisionCapture)
+    $('#divisionButton').on('click', divisionCapture);
 
-    $('#clearButton').on('click', clearInput)
+    $('#clearButton').on('click', clearInput);
+
+    appendCalculations();
 
 }
 
@@ -32,7 +34,7 @@ function addCalculation () {
     inputObj.inputOne = $('#inputOne').val(),
     inputObj.inputTwo = $('#inputTwo').val(),
 
-    // need to POST the object to the server
+    // need to POST the object to the server so that it can store the information and run calculations
     $.ajax({
         url: '/input-values',
         method: 'POST',
@@ -43,6 +45,7 @@ function addCalculation () {
     appendCalculations();
 }
 
+//need to create functions per each button that adds its button operator into the inputObj
 function additionCapture () {
     inputObj.operator = '+';
 }
@@ -61,22 +64,27 @@ function divisionCapture () {
 
 
 function clearInput() {
+//check that the clicker is working
     console.log('clear button working');
+//clear the input boxes when the user clicks on the clear button
     $('#inputOne').val('');
     $('#inputTwo').val('');
 }
 
 function appendCalculations () {
+    //need to request data from the server
     $.ajax({
         method: 'GET',
         url: '/input-values'
+    //once received, console.log the values to make sure it worked
     }).then(function (response) {
         console.log('Display values', response);
+    //need to append the total per each equation and empty it 
         $('#appendItems').empty();
+    //loop through response and append the equations to the DOM (Don't forget to empty)
         for (object of response) {
             $('#total').empty();
             $('#total').append(object.solution);
-            // $('#total').empty();
             $('#appendItems').append(`
             <li>${object.inputOne} ${object.operator} ${object.inputTwo} = ${object.solution} `)
         }

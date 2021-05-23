@@ -16,17 +16,17 @@ app.use(bodyParser.urlencoded({extended: true}));
 //create an empty array to hold the input values
 let inputValues = [];
 
-console.log(inputValues);
+// console.log(inputValues);
 
 //need to create a POST rounte to recieve object from client side
 app.post('/input-values', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
 //push the req.body values into the array
     inputValues.push(req.body);
 //call function to calculate the values just recieved 
     calculateUserInput();
 
-    console.log(inputValues);
+    // console.log(inputValues);
 
 //send a status stating the message has been recieved 
     res.sendStatus(201);
@@ -53,6 +53,7 @@ function calculateUserInput () {
 }
 
 app.get('/input-values', (req, res) => {
+
 
 console.log(inputValues);
 

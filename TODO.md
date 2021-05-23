@@ -19,7 +19,7 @@
                 - [ x ] Make vendors folder
                     - [ x ] Add jQuery.js file here
 
-- [ ] HTML
+- [ x ] HTML
     - [ x ] Add an input that takes in a number
         - [ x ] Give this input an id 
     - [ x ] Add 4 buttons (addition, subtraction, multiplication, division)
@@ -30,23 +30,23 @@
         - [ x ] Give this button an id
     - [ x ] Create a clear button that clears the inputs
         - [ x ] Give this button an id
-    - [ ] Under these inputs and buttons, add a div that calculates the total output of the   inputs
-    - [ ] Create an unordered list that keeps track of previous math equations
+    - [ x ] Under these inputs and buttons, add a div that calculates the total output of the   inputs
+    - [ x ] Create an unordered list that keeps track of previous math equations
 
-- [ ] Client.js
+- [ x ] Client.js
     - [ x ] Create click listeners for each button that carry out that specific task (ex: add,   subract, etc)
     - [ x ] Capture the user input and create an object
         - [ x ] POST or send this object to the server to be stored
-    - [ ] Will need to GET past calculations to post to DOM
-        - [ ] Append the total arimethic calculation to the DOM
-        - [ ] Append the object in an unordered list to the DOM to keep track of previous problems
+    - [ x ] Will need to GET past calculations to post to DOM
+        - [ x ] Append the total arimethic calculation to the DOM
+        - [ x ] Append the object in an unordered list to the DOM to keep track of previous problems
 
 - [ ] Server Side
     - [ x ] Will need to initiate node and bring in express
         - [ x ] Bring in node_modules 
         - [ x ] Create statements that import express and setup a port
         - [ x ] Initiate and create the background info to run a server off of
-    - [ ] Create a POST function that stores user input in an array (maybe object?)
-    - [ ] Will need to create a function that calculates the user input 
-    - [ ] Create a GET function that pulls the stored info and calculations in the array and sends it to the client
+    - [ x ] Create a POST function that stores user input in an array (maybe object?)
+    - [ x ] Will need to create a function that calculates the user input 
+    - [ x ] Create a GET function that pulls the stored info and calculations in the array and sends it to the client
     
