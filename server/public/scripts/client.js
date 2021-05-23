@@ -74,7 +74,9 @@ function appendCalculations () {
         console.log('Display values', response);
         $('#appendItems').empty();
         for (object of response) {
-            // $('#total').append(object.solution);
+            $('#total').empty();
+            $('#total').append(object.solution);
+            // $('#total').empty();
             $('#appendItems').append(`
             <li>${object.inputOne} ${object.operator} ${object.inputTwo} = ${object.solution} `)
         }
