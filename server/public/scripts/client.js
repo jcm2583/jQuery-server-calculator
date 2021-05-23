@@ -71,8 +71,10 @@ function appendCalculations () {
         method: 'GET',
         url: '/input-values'
     }).then(function (response) {
+        console.log('Display values', response);
         $('#appendItems').empty();
         for (object of response) {
+            // $('#total').append(object.solution);
             $('#appendItems').append(`
             <li>${object.inputOne} ${object.operator} ${object.inputTwo} = ${object.solution} `)
         }

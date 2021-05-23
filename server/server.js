@@ -21,10 +21,9 @@ console.log(inputValues);
 //need to create a POST rounte to recieve object from client side
 app.post('/input-values', (req, res) => {
     console.log(req.body);
-    //push the req body into an empty array
-
+//push the req.body values into the array
     inputValues.push(req.body);
-    
+//call function to calculate the values just recieved 
     calculateUserInput();
 
     console.log(inputValues);
@@ -33,19 +32,22 @@ app.post('/input-values', (req, res) => {
     res.sendStatus(201);
 });
 
+
+
+
 function calculateUserInput () {
     for (equation of inputValues) {
         if (equation.operator == '+') {
-            equation.solution = equation.inputOne + equation.inputTwo;
+            equation.solution = Number(equation.inputOne) + Number(equation.inputTwo);
         }
         if (equation.operator == '-') {
-            equation.solution = equation.inputOne - equation.inputTwo;
+            equation.solution = Number(equation.inputOne) - Number(equation.inputTwo);
         }
         if (equation.operator == '*') {
-            equation.solution = equation.inputOne * equation.inputTwo;
+            equation.solution = Number(equation.inputOne) * Number(equation.inputTwo);
         }
         if (equation.operator == '/') {
-            equation.solution = equation.inputOne / equation.inputTwo;
+            equation.solution = Number(equation.inputOne) / Number(equation.inputTwo);
         }
     }
 }
