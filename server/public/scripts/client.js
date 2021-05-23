@@ -9,7 +9,7 @@ function readyNow () {
     // Click Listeners
     $('#equalsButton').on('click', addCalculation);
 
-    // //addition click listern
+    //create click listeners for each operator button
     $('#additionButton').on('click', additionCapture);
 
     $('#subtractionButton').on('click', subtractionCapture);
@@ -20,16 +20,18 @@ function readyNow () {
 
     $('#clearButton').on('click', clearInput);
 
+    //call on function to append calculations to the DOM once page loads
     appendCalculations();
 
 }
 
+//create an empty object that can receive the user input to send to the server side
 let inputObj = {
 
 };
 
+//create a function that captures the user input data, places it in an object, and sends that object to the server
 function addCalculation () {
-    console.log("clicker works");
     // collect user input values and store them in an object
     inputObj.inputOne = $('#inputOne').val(),
     inputObj.inputTwo = $('#inputTwo').val(),
@@ -65,7 +67,7 @@ function divisionCapture () {
 
 function clearInput() {
 //check that the clicker is working
-    console.log('clear button working');
+    // console.log('clear button working');
 //clear the input boxes when the user clicks on the clear button
     $('#inputOne').val('');
     $('#inputTwo').val('');

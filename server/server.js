@@ -18,24 +18,23 @@ let inputValues = [];
 
 // console.log(inputValues);
 
-//need to create a POST rounte to recieve object from client side
+//need to create a POST route to receive object from client side
 app.post('/input-values', (req, res) => {
-    // console.log(req.body);
+
 //push the req.body values into the array
     inputValues.push(req.body);
-//call function to calculate the values just recieved 
+
+//call calculation function to calculate the values just recieved 
     calculateUserInput();
 
-    // console.log(inputValues);
-
-//send a status stating the message has been recieved 
-    res.sendStatus(201);
+//send an 'OK' status stating the data has been recieved 
+    res.sendStatus(200);
 });
 
 
-
-
+//creat a function that calculates that data based on which operator button was clicked on
 function calculateUserInput () {
+    //will need to loop through the array and convert strings to numbers 
     for (equation of inputValues) {
         if (equation.operator == '+') {
             equation.solution = Number(equation.inputOne) + Number(equation.inputTwo);
@@ -52,14 +51,14 @@ function calculateUserInput () {
     }
 }
 
+//need to create a GET request to pull the stored data and send back to the client upon request
 app.get('/input-values', (req, res) => {
 
-
+//log inputValues array
 console.log(inputValues);
 
-
+//send the calculated inputValues array back to the client side
 res.send(inputValues);
-
 
 })
 

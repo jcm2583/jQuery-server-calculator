@@ -1,9 +1,7 @@
 # Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Server Side Calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+I created a calculator that features two text boxes where a user can enter a number in each text box and click on an operator button to perform whichever mathematical equation they chose. Upon clicking on the '=' button, the client sends the user input data to the server where a function is ran that calculates the user's choices and stores that data in an array. When the client requests the stored data, the server then sends the calculated data back to the client where it is then displayed on the DOM.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
